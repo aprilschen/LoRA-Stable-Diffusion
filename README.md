@@ -1,2 +1,2 @@
 # LoRA-Stable-Diffusion
-Low Rank Approximation applications to Stable Diffusion and Project
+Low Rank Approximation and Singular Value Decomposition applications to Stable Diffusion Project
