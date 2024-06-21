@@ -1,4 +1,13 @@
 # Scenery-Generation LoRA
+![Image 1](/images/1.png)
+![Image 2](/images/2.png)
+![Image 3](/images/3.png)
+![Image 4](/images/4.png)
+![Image 5](/images/5.png)
+![Image 6](/images/6.png)
+![Image 7](/images/7.png)
+
+
 This project uses a Low-Rank Approximation of a pretrained Stable Diffusion model to generate beautiful scenery. Examples of such pictures are shown below, and you can use the model generator freely at [animescenery.gen](). **Note**: To maintain low compute costs, the website rate limits users to two generations per day.
 
 #### Tech Stack
