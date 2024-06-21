@@ -18,6 +18,6 @@ Cloud:
 Low Rank Approximation is a technique which lossy compresses Singular Value Decomposition matrices into lower rank while maintaining the “energy” within the matrix, given by the monotonically decreasing sequence of singular values. In a process called Low Rank Adaptation, we freeze the pretrained model weights of a model and inject trainable Low Rank decomposition matrices onto their weights to quickly adapt them to specific tasks.
 
 #### Training Details
-This Low Rank Adaptation uses the base model, [Anything V5](https://huggingface.co/stablediffusionapi/anything-v5) and finetunes it using a repository of 171 images of anime scenery, which you can find [here]()
+This Low Rank Adaptation uses the base model, [Anything V5](https://huggingface.co/stablediffusionapi/anything-v5) and finetunes it using a repository of 171 images of anime scenery, which you can find [here](https://drive.google.com/drive/folders/1-0hsYi7-Nr6-jJ-IssND7krKQVwbLx_G?usp=sharing)
 
 
