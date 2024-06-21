@@ -4,6 +4,7 @@ This project uses a Low-Rank Approximation of a pretrained Stable Diffusion mode
 #### Tech Stack
 Front-end: 
  - React
+ - Material UI
 
 Back-end:
  - Express
