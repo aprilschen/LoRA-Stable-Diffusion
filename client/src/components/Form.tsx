@@ -1,27 +1,12 @@
 import * as React from 'react';
 import axios from 'axios';
 import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { useState } from 'react';
-
-function Copyright(props: any) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+import { Typography } from '@mui/material';
 
 export default function Form() {
   const [image, setImage] = useState("");
@@ -54,23 +39,10 @@ export default function Form() {
     };
 
   return (
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-
-        <img src={`data:image/png;base64, ${image}`}></img>
-
-
-        <Box
-          sx={{
-            marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
+      <Container style={{padding: '0vh 5vw 5vh 5vw'}}>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12}>
+              <Grid item xs={6}>
                 <TextField
                   name="prompts"
                   required
@@ -79,9 +51,10 @@ export default function Form() {
                   label="Prompts"
                   autoFocus
                   multiline
+                  placeholder='<lora:lora_scenery:1>, [B]'
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={6}>
                 <TextField
                   fullWidth
                   id="negativeTags"
@@ -91,7 +64,7 @@ export default function Form() {
                   multiline
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={6}>
                 <TextField
                   required
                   fullWidth
@@ -102,7 +75,7 @@ export default function Form() {
                   defaultValue={8.5}
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={6}>
                 <TextField
                   required
                   fullWidth
@@ -113,7 +86,7 @@ export default function Form() {
                   defaultValue={512}
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={6}>
                 <TextField
                   required
                   fullWidth
@@ -134,8 +107,29 @@ export default function Form() {
             Submit
             </Button>
           </Box>
+
+        <Typography style={{textAlign:'center', fontSize: '3vh', padding: "3vh"}}>Output:</Typography>
+        <Box sx={{textAlign: 'center'}}>
+            <img style={{marginLeft: 'auto', marginRight: 'auto'}} 
+            src={`data:image/png;base64, ${image}`}
+            alt="Please generate an image first!"
+            ></img>
         </Box>
-        <Copyright sx={{ mt: 5 }} />
+
+        <Typography style={{paddingTop: "4vh"}}>Technical Details: 
+          This model uses <a href='https://arxiv.org/abs/2106.09685'>Low-Rank Adaptation</a> to fine-tune a pretrained stable diffusion model to generate background scenery.
+          The LoRA was trained on a hand-picked dataset of <a href='https://drive.google.com/drive/u/0/folders/1-0hsYi7-Nr6-jJ-IssND7krKQVwbLx_G'>171 images</a> and their corresponding tags were
+          generated using <a href='https://github.com/Linaqruf/kohya-trainer'>Kohya Trainer.</a>
+        </Typography>
+
+        <br></br>
+
+        <Typography>Detailed information on the mathematics behind LoRA, 
+          as well as explanations of its relevant model architectures, 
+          is available in the {" "}
+          <a href='https://www.aprilschen.com/files/LoRA_LinAlg.pdf'>
+          Low Rank Adaptation report</a> I authored as a final project for my Linear Algebra class. </Typography>
+          
       </Container>
   );
 }
