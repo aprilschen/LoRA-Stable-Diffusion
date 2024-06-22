@@ -9,6 +9,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@fontsource/roboto": "^5.0.13",
+    "@mui/icons-material": "^5.15.20",
+    "@mui/material": "^5.15.20",
+    "axios": "^1.7.2",
     "express": "^4.19.2"
   }
 }
