@@ -53,13 +53,13 @@ export default function Form() {
         })
     };
 
-
-
-
-
   return (
       <Container component="main" maxWidth="xs">
         <CssBaseline />
+
+        <img src={`data:image/png;base64, ${image}`}></img>
+
+
         <Box
           sx={{
             marginTop: 8,
