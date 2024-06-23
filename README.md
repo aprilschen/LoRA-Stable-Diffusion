@@ -15,8 +15,8 @@ Back-end:
 
 Cloud: 
  - AWS EC2
- - AWS Elastic Beanstalk
  - AWS Lambda
+ - NGrok
 
  Model Development: 
  - PyTorch

@@ -28,7 +28,7 @@ export default function Form() {
     }
 
 
-    axios.post('http://127.0.0.1:7860/sdapi/v1/txt2img', output)
+    axios.post('https://8a25-2601-643-8c85-2620-dd44-b927-6f02-be8b.ngrok-free.app/sdapi/v1/txt2img', output)
         .then((response) => {
             setImage(response.data.images[0])
             return response
