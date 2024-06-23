@@ -3,7 +3,7 @@
 ![Image 2](/images/2.png)
 ![Image 5](/images/5.png)
 
-This project uses a Low-Rank Approximation of a pretrained Stable Diffusion model to generate beautiful scenery. Examples of such pictures are shown below, and you can use the model generator freely at [animescenery.gen](). **Note**: To maintain low compute costs, the website rate limits users to two generations per day.
+This project uses a Low-Rank Approximation of a pretrained Stable Diffusion model to generate beautiful scenery. Examples of such pictures are shown below, and you can use the model generator freely at [this link](https://main.d3nnkxq22b08y7.amplifyapp.com/). **Note**: To maintain low compute costs, the website rate limits users to two generations per day.
 
 #### Tech Stack
 Front-end: 
