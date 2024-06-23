@@ -17,7 +17,7 @@ export default function Instructions() {
           <br></br>
 
           <Typography>             
-          <i>Note: To limit compute costs, generation is limited to 10 queries/day.</i>
+          <i>Note: To limit compute costs, generation is limited to 100 queries/day.</i>
           </Typography>
 
           <br></br>

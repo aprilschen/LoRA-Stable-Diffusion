@@ -51,7 +51,7 @@ export default function Form() {
                   label="Prompts"
                   autoFocus
                   multiline
-                  placeholder='<lora:lora_scenery:1>, [B]'
+                  defaultValue='<lora:lora_scenery:1>, [B]'
                 />
               </Grid>
               <Grid item xs={6}>
