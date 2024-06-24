@@ -10,6 +10,8 @@ import { Typography } from '@mui/material';
 
 export default function Form() {
   const [image, setImage] = useState("");
+  const url = 'https://f2ec-2601-643-8c85-2620-dd44-b927-6f02-be8b.ngrok-free.app'
+  const api = '/sdapi/v1/txt2img'
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -28,7 +30,7 @@ export default function Form() {
     }
 
 
-    axios.post('https://e6c0-2605-6440-3009-0-cae-a7b-7561-d6e7.ngrok-free.app/sdapi/v1/txt2img', output)
+    axios.post(`${url}${api}`, output)
         .then((response) => {
             setImage(response.data.images[0])
             return response
