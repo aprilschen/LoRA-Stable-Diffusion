@@ -17,7 +17,7 @@ export default function Instructions() {
           <br></br>
 
           <Typography>             
-          <i>Note: To limit compute costs, generation is limited to 100 queries/day.</i>
+          <i>Note: To limit compute costs, the API accessing this model uses an ngrok tunnel to my personal PC, and thus may not always be available. (check back later?)</i>
           </Typography>
 
           <br></br>
